@@ -9,9 +9,7 @@
 		<link href="style.css" rel="stylesheet" type="text/css">
 	</head>
 	<body data-ng-cloak>
-
 		<div class="menu fixed-center">
-
 			<button data-ng-click="save(); showTextArea = true">Export</button>
 			<button data-ng-hide="showTextArea" data-ng-click="showTextArea = true">Import</button>
 
@@ -23,50 +21,36 @@
 
 			<button data-ng-click="expand()">Expand</button>
 			<button data-ng-click="undo()" data-ng-disable="history.length == 0">Undo</button>
-
-
 		</div>
 
 		<div class="helper fixed-center" data-ng-show="helperNeeded">
-			<table>
-				<tr>
-					<td data-ng-repeat="cell in helperNums track by $index">{{ cell }}</td>
-					<td class="index">{{ firstHiddenRowNumber }}</td>
-				</tr>
-			</table>
+			<div class="align-center">
+				<table>
+					<tr>
+						<td data-ng-repeat="cell in helperNums track by $index">{{ cell }}</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 
-		<div class="main-wrapper">
-
-			<div>
-				<table class="main-row">
-					<thead>
-						<tr>
-							<td colspan="10">Find pairs where m = n or m + n = 10</td>
-						</tr>
-					</thead>
-
-					<tbody>
-
-						<tr data-ng-repeat="row in table track by $index"
-							data-ng-hide="rowBlank[$index]">
-							<td data-ng-repeat="cell in row.data track by $index"
-								data-ng-click="select(cell, table, rowBlank);"
-								data-ng-class="{selected: cell.selected}">
-								<div class="cellValue">{{ cell.val }}</div>
-								<div class="small">{{ cell.row }}, {{ cell.col }}</div>
-							</td>
-							<td class="index">{{ row.number + 1 }}</td>
-						</tr>
-
-					</tbody>
-
-				</table>
-
-				<div class="small" data-ng-repeat="msg in msgs track by $index"
-					data-ng-bind="msg"></div>
-			</div>
-
+		<div class="main-wrapper align-center">
+			<table class="main-row">
+				<thead>
+					<tr>
+						<td colspan="9">Find pairs where m = n or m + n = 10</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="row in table track by $index"
+						data-ng-hide="rowBlank[$index]">
+						<td data-ng-repeat="cell in row.data track by $index"
+							data-ng-click="select(cell, table, rowBlank);"
+							data-ng-class="{selected: cell.selected}">
+							<div class="cellValue">{{ cell.val }}</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 		<script src="lib/jquery.min.js"></script>
