@@ -13,7 +13,6 @@ table {
 
 table thead th {
 	/* 	border-right: 1px solid #777; */
-	
 }
 
 th,td {
@@ -24,6 +23,11 @@ th,td {
 	width: 2em;
 	height: 2em;
 	cursor: pointer;
+
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	user-select: none;          /* Likely future */
 }
 
 td.index {
@@ -92,9 +96,13 @@ button {
 }
 
 .helper {
-	background-color: #fff;
 	height: 42px;
 	top: 0;
+}
+
+.helper table {
+	background-color: #f2f2f2;
+	margin: 11px;
 }
 
 .helper td {
