@@ -3,14 +3,25 @@
     "lang": "et",
     "name": "Numbrikas",
     "scope": "/",
-    "display": "browser",
+    "display": "standalone",
     "start_url": "https://rahelest.github.io/",
     "short_name": "Numbrikas",
     "theme_color": "transparent",
     "description": "Number game",
     "orientation": "portrait",
     "background_color": "pick",
-    "related_applications": [],
+    "related_applications":  [
+  {
+    "src": "/images/icon-192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  },
+  {
+    "src": "/images/icon-512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }
+],
     "prefer_related_applications": false,
     "icons": []
 }
