@@ -1,0 +1,16 @@
+{
+    "dir": "ltr",
+    "lang": "et",
+    "name": "Numbrikas",
+    "scope": "/",
+    "display": "browser",
+    "start_url": "https://rahelest.github.io/",
+    "short_name": "Numbrikas",
+    "theme_color": "transparent",
+    "description": "Number game",
+    "orientation": "portrait",
+    "background_color": "pick",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": []
+}
