@@ -1,208 +1,202 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Numbrikas - Svelte</title>
+    <meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-54ceb337.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-f5e53f42.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-2ebcf4bc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-a3cb497a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-5866ae19.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-673c3b48.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-70c11f8f.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-b8ee4d7c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-1daba58d.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/guide/_page.svelte-44a6ae36.js">
+  </head>
+  <body>
+  <div>
+    
 
-		<title>Numbrikas</title>
 
-		<link href="style.css" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<div class="main-wrapper align-center">
-			<h4>Introduction</h4>
-			<p>Clear the board by finding pairs. Copy all the remaining cells to find new pairs by clicking expand.</p>
-			<h5>Pair is two equal numbers</h5>
-			<table>
-				<tr>
-					<td>5</td>
-					<td class="selected">1</td>
-					<td class="selected">1</td>
-					<td>2</td>
-					<td class="selected">3</td>
-					<td class="selected">3</td>
-					<td>1</td>
-					<td class="selected">5</td>
-					<td class="selected">5</td>
-				</tr>
-			</table>
+<main class="svelte-1en8bdn"><div class="main__wrapper"><h4>Introduction</h4>
+  <p>Clear the board by finding pairs. Copy all the remaining cells to find new pairs by clicking
+    expand.
+  </p>
+  <h5 class="svelte-3clety">Pair is two equal numbers</h5>
+  <div class="main__table"><button class="five">5</button>
+    <button class="selected one">1</button>
+    <button class="selected one">1</button>
+    <button class="two">2</button>
+    <button class="selected three">3</button>
+    <button class="selected three">3</button>
+    <button class="one">1</button>
+    <button class="selected five">5</button>
+    <button class="selected five">5</button></div>
 
-			<h5>or numbers that sum to 10</h5>
-			<table>
-				<tr>
-					<td></td>
-					<td class="selected">1</td>
-					<td></td>
-					<td class="selected">2</td>
-					<td></td>
-					<td class="selected">3</td>
-					<td></td>
-					<td class="selected">4</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="selected">9</td>
-					<td></td>
-					<td class="selected">8</td>
-					<td></td>
-					<td class="selected">7</td>
-					<td></td>
-					<td class="selected">6</td>
-					<td></td>
-				</tr>
-			</table>
+  <h5 class="svelte-3clety">or numbers that sum to 10</h5>
+  <div class="main__table"><button></button>
+    <button class="selected one">1</button>
+    <button></button>
+    <button class="selected two">2</button>
+    <button></button>
+    <button class="selected three">3</button>
+    <button></button>
+    <button class="selected four">4</button>
+    <button></button>
+    <button></button>
+    <button class="selected one">9</button>
+    <button></button>
+    <button class="selected two">8</button>
+    <button></button>
+    <button class="selected three">7</button>
+    <button></button>
+    <button class="selected four">6</button>
+    <button></button></div>
 
-			<h5>Pairs have to be adjacent</h5>
-			<table>
-				<tr>
-					<td class="selected">9</td>
-					<td class="selected">1</td>
-					<td></td>
-					<td class="selected">2</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected">2</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
+  <h5 class="svelte-3clety">Pairs have to be adjacent</h5>
+  <div class="main__table"><button class="selected one">9</button>
+    <button class="selected one">1</button>
+    <button></button>
+    <button class="selected two">2</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button class="selected two">2</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button></div>
 
-			<h5>Blank cells don't count</h5>
-			<table>
-				<tr>
-					<td></td>
-					<td class="selected">4</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected">1</td>
-					<td></td>
-					<td class="selected">1</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td class="selected">4</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
+  <h5 class="svelte-3clety">Blank cells don&#39;t count</h5>
+  <div class="main__table"><button></button>
+    <button class="selected four">4</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button class="selected one">1</button>
+    <button></button>
+    <button class="selected one">1</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button class="selected four">4</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button></div>
 
-			<h5>Line breaks don't count either</h5>
-			<table>
-				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>2</td>
-					<td></td>
-					<td></td>
-					<td>3</td>
-					<td class="selected">1</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td class="selected">1</td>
-					<td></td>
-					<td>4</td>
-					<td></td>
-					<td></td>
-					<td>5</td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
+  <h5 class="svelte-3clety">Line breaks don&#39;t count either</h5>
+  <div class="main__table"><button></button>
+    <button></button>
+    <button></button>
+    <button class="two">2</button>
+    <button></button>
+    <button></button>
+    <button class="three">3</button>
+    <button class="selected one">1</button>
+    <button></button>
+    <button class="selected one">1</button>
+    <button></button>
+    <button class="four">4</button>
+    <button></button>
+    <button></button>
+    <button class="five">5</button>
+    <button></button>
+    <button></button>
+    <button></button></div>
 
-			<h5 id="expand">Out or pairs? "Expand" copies everything and you can find new combinations:</h5>
-			<table>
-				<tr>
-					<td>3</td>
-					<td>4</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>3</td>
-					<td></td>
-					<td>6</td>
-					<td>7</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td></td>
-					<td></td>
-					<td>3</td>
-					<td>4</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-			<h5>Expand!</h5>
-			<table>
-				<tr>
-					<td>3</td>
-					<td>4</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td class="selected">3</td>
-					<td></td>
-					<td>6</td>
-					<td>7</td>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td></td>
-					<td></td>
-					<td>3</td>
-					<td>4</td>
-					<td class="selected">3</td>
-					<td>4</td>
-					<td>3</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>7</td>
-					<td>1</td>
-					<td>3</td>
-					<td>4</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-			</table>
-		</div>
-	</body>
+  <h5 id="expand" class="svelte-3clety">Out or pairs? &quot;Expand&quot; copies everything and you can find new combinations. Before:</h5>
+  <div class="main__table"><button class="three">3</button>
+    <button class="four">4</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button class="three">3</button>
+    <button></button>
+    <button class="four">6</button>
+    <button class="three">7</button>
+    <button class="one">1</button>
+    <button></button>
+    <button></button>
+    <button class="three">3</button>
+    <button class="four">4</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button></div>
+  <h5 class="svelte-3clety">After:</h5>
+  <div class="main__table"><button class="three">3</button>
+    <button class="four">4</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button class="three">3</button>
+    <button></button>
+    <button class="four">6</button>
+    <button class="three">7</button>
+    <button class="one">1</button>
+    <button></button>
+    <button></button>
+    <button class="three">3</button>
+    <button class="four">4</button>
+    <button class="highlighted three svelte-3clety">3</button>
+    <button class="highlighted four svelte-3clety">4</button>
+    <button class="highlighted three svelte-3clety">3</button>
+    <button class="highlighted four svelte-3clety">6</button>
+    <button class="highlighted three svelte-3clety">7</button>
+    <button class="highlighted one svelte-3clety">1</button>
+    <button class="highlighted three svelte-3clety">3</button>
+    <button class="highlighted four svelte-3clety">4</button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button>
+    <button></button></div>
+</div>
+</main>
+
+
+		<script type="module" data-sveltekit-hydrate="1qlip13">
+			import { start } from "./_app/immutable/start-2ebcf4bc.js";
+
+			start({
+				env: {},
+				hydrate: {
+					status: 200,
+					error: null,
+					node_ids: [0, 3],
+					params: {},
+					route: {"id":"/guide"},
+					data: [null,null],
+					form: null
+				},
+				paths: {"base":"","assets":""},
+				target: document.querySelector('[data-sveltekit-hydrate="1qlip13"]').parentNode,
+				trailing_slash: "never"
+			});
+		</script>
+	
+  </div>
+  </body>
 </html>
