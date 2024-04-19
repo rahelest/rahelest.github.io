@@ -1,63 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Numbrikas - Svelte</title>
-    <meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.08f9b184.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page.687af30e.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.41667d81.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.f2503188.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.89923e19.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.fe419744.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.14e76ecd.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.svelte.8bc90ec6.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.ts.fb1865a6.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/_layout.da46b06b.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_page.svelte.35f855f8.mjs">
-  </head>
-  <body>
-  <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-
-
-<main class="svelte-1en8bdn"><div class="main__menu"><button disabled>Undo</button>
-    <button disabled>Redo</button>
-    <button>Expand</button>
-    <button>Restart</button>
-    <button>Dark/Light</button>
-    <button>Hover</button></div>
-
-  <div class="main__wrapper"><p>Clear board by finding <a href="/guide" target="_blank">pairs</a></p>
-    <div class="main__table"><div class="main__stats">Stats:
-        <br>Cells: 0
-        <br>Rows: 0
-        <br>
-        <br>1: 0<br>2: 0<br>3: 0<br>4: 0<br>5: 0<br>6: 0<br>7: 0<br>8: 0<br>9: 0</div>
-
-      </div>
-  </div>
-</main>
-
-
+		<link href="./_app/immutable/assets/0.B6CEvezN.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.BzKyAzso.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.Boq86rzN.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.C22AhYqI.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.Bmg8oFKD.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.D_GRTHN4.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.4XD0NIZ4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.nCq1ZYsH.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.DSSkpN8z.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.Bd0xLisG.js"><title>Numbrikas</title><!-- HEAD_svelte-1xsdtyd_START --><meta name="description" content="A game of numbers"><!-- HEAD_svelte-1xsdtyd_END -->
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">  <main class="svelte-1en8bdn"> <div><div class="main__menu"><button disabled>Undo</button> <button disabled>Redo</button> <button data-svelte-h="svelte-177tbeg">Expand</button> <button data-svelte-h="svelte-ijq3fw">Restart</button> <button data-svelte-h="svelte-3pc124">Dark/Light</button> <button>Hover</button></div> <div class="main__wrapper"><p data-svelte-h="svelte-r5sdif">Clear board by finding <a href="/guide" target="_blank">pairs</a></p> <div class="main__table"><div class="main__stats">Stats:
+        <br>Cells: 0 <br>Rows: 0 <br> <br>1: 0<br>2: 0<br>3: 0<br>4: 0<br>5: 0<br>6: 0<br>7: 0<br>8: 0<br>9: 0</div> </div></div> </div> </main> 
 			
 			<script>
 				{
-					__sveltekit_1w0zf3t = {
-						env: {},
-						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
-						element: document.currentScript.parentElement
+					__sveltekit_1gipswi = {
+						base: new URL(".", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.41667d81.mjs"),
-						import("./_app/immutable/entry/app.14e76ecd.mjs")
+						import("./_app/immutable/entry/start.Boq86rzN.js"),
+						import("./_app/immutable/entry/app.4XD0NIZ4.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1w0zf3t.element, {
+						kit.start(app, element, {
 							node_ids: [0, 2],
 							data,
 							form: null,
@@ -66,7 +43,6 @@
 					});
 				}
 			</script>
-		
-  </div>
+		</div>
   </body>
 </html>

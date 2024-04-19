@@ -1,199 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="./favicon.png" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Numbrikas - Svelte</title>
-    <meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.08f9b184.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page.f5e53f42.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.41667d81.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.f2503188.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.89923e19.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.fe419744.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.14e76ecd.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.svelte.8bc90ec6.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.ts.fb1865a6.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/_layout.da46b06b.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/guide-page.svelte.89c61102.mjs">
-  </head>
-  <body>
-  <div>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     
-
-
-<main class="svelte-1en8bdn"><div class="main__wrapper"><h4>Introduction</h4>
-  <p>Clear the board by finding pairs. Copy all the remaining cells to find new pairs by clicking
-    expand.
-  </p>
-  <h5 class="svelte-3clety">Pair is two equal numbers</h5>
-  <div class="main__table"><button class="five">5</button>
-    <button class="selected one">1</button>
-    <button class="selected one">1</button>
-    <button class="two">2</button>
-    <button class="selected three">3</button>
-    <button class="selected three">3</button>
-    <button class="one">1</button>
-    <button class="selected five">5</button>
-    <button class="selected five">5</button></div>
-
-  <h5 class="svelte-3clety">or numbers that sum to 10</h5>
-  <div class="main__table"><button></button>
-    <button class="selected one">1</button>
-    <button></button>
-    <button class="selected two">2</button>
-    <button></button>
-    <button class="selected three">3</button>
-    <button></button>
-    <button class="selected four">4</button>
-    <button></button>
-    <button></button>
-    <button class="selected one">9</button>
-    <button></button>
-    <button class="selected two">8</button>
-    <button></button>
-    <button class="selected three">7</button>
-    <button></button>
-    <button class="selected four">6</button>
-    <button></button></div>
-
-  <h5 class="svelte-3clety">Pairs have to be adjacent</h5>
-  <div class="main__table"><button class="selected one">9</button>
-    <button class="selected one">1</button>
-    <button></button>
-    <button class="selected two">2</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button class="selected two">2</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button></div>
-
-  <h5 class="svelte-3clety">Blank cells don&#39;t count</h5>
-  <div class="main__table"><button></button>
-    <button class="selected four">4</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button class="selected one">1</button>
-    <button></button>
-    <button class="selected one">1</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button class="selected four">4</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button></div>
-
-  <h5 class="svelte-3clety">Line breaks don&#39;t count either</h5>
-  <div class="main__table"><button></button>
-    <button></button>
-    <button></button>
-    <button class="two">2</button>
-    <button></button>
-    <button></button>
-    <button class="three">3</button>
-    <button class="selected one">1</button>
-    <button></button>
-    <button class="selected one">1</button>
-    <button></button>
-    <button class="four">4</button>
-    <button></button>
-    <button></button>
-    <button class="five">5</button>
-    <button></button>
-    <button></button>
-    <button></button></div>
-
-  <h5 id="expand" class="svelte-3clety">Out or pairs? &quot;Expand&quot; copies everything and you can find new combinations. Before:</h5>
-  <div class="main__table"><button class="three">3</button>
-    <button class="four">4</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button class="three">3</button>
-    <button></button>
-    <button class="four">6</button>
-    <button class="three">7</button>
-    <button class="one">1</button>
-    <button></button>
-    <button></button>
-    <button class="three">3</button>
-    <button class="four">4</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button></div>
-  <h5 class="svelte-3clety">After:</h5>
-  <div class="main__table"><button class="three">3</button>
-    <button class="four">4</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button class="three">3</button>
-    <button></button>
-    <button class="four">6</button>
-    <button class="three">7</button>
-    <button class="one">1</button>
-    <button></button>
-    <button></button>
-    <button class="three">3</button>
-    <button class="four">4</button>
-    <button class="highlighted three svelte-3clety">3</button>
-    <button class="highlighted four svelte-3clety">4</button>
-    <button class="highlighted three svelte-3clety">3</button>
-    <button class="highlighted four svelte-3clety">6</button>
-    <button class="highlighted three svelte-3clety">7</button>
-    <button class="highlighted one svelte-3clety">1</button>
-    <button class="highlighted three svelte-3clety">3</button>
-    <button class="highlighted four svelte-3clety">4</button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button>
-    <button></button></div>
-</div>
-</main>
-
-
+		<link href="./_app/immutable/assets/0.B6CEvezN.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/3.D_jrG2Yz.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.Boq86rzN.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.C22AhYqI.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.Bmg8oFKD.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.D_GRTHN4.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.4XD0NIZ4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.nCq1ZYsH.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.DSSkpN8z.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.D4XTSRcC.js">
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">  <main class="svelte-1en8bdn"><div class="main__wrapper" data-svelte-h="svelte-ec5sqw"><h4>Introduction</h4> <p>Clear the board by finding pairs. Copy all the remaining cells to find new pairs by clicking
+    expand.</p> <h5 class="svelte-3clety">Pair is two equal numbers</h5> <div class="main__table"><button class="five">5</button> <button class="selected one">1</button> <button class="selected one">1</button> <button class="two">2</button> <button class="selected three">3</button> <button class="selected three">3</button> <button class="one">1</button> <button class="selected five">5</button> <button class="selected five">5</button></div> <h5 class="svelte-3clety">or numbers that sum to 10</h5> <div class="main__table"><button></button> <button class="selected one">1</button> <button></button> <button class="selected two">2</button> <button></button> <button class="selected three">3</button> <button></button> <button class="selected four">4</button> <button></button> <button></button> <button class="selected one">9</button> <button></button> <button class="selected two">8</button> <button></button> <button class="selected three">7</button> <button></button> <button class="selected four">6</button> <button></button></div> <h5 class="svelte-3clety">Pairs have to be adjacent</h5> <div class="main__table"><button class="selected one">9</button> <button class="selected one">1</button> <button></button> <button class="selected two">2</button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button class="selected two">2</button> <button></button> <button></button> <button></button> <button></button> <button></button></div> <h5 class="svelte-3clety">Blank cells don&#39;t count</h5> <div class="main__table"><button></button> <button class="selected four">4</button> <button></button> <button></button> <button></button> <button class="selected one">1</button> <button></button> <button class="selected one">1</button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button class="selected four">4</button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button> <button></button></div> <h5 class="svelte-3clety">Line breaks don&#39;t count either</h5> <div class="main__table"><button></button> <button></button> <button></button> <button class="two">2</button> <button></button> <button></button> <button class="three">3</button> <button class="selected one">1</button> <button></button> <button class="selected one">1</button> <button></button> <button class="four">4</button> <button></button> <button></button> <button class="five">5</button> <button></button> <button></button> <button></button></div> <h5 id="expand" class="svelte-3clety">Out or pairs? &quot;Expand&quot; copies everything and you can find new combinations. Before:</h5> <div class="main__table"><button class="three">3</button> <button class="four">4</button> <button></button> <button></button> <button></button> <button class="three">3</button> <button></button> <button class="four">6</button> <button class="three">7</button> <button class="one">1</button> <button></button> <button></button> <button class="three">3</button> <button class="four">4</button> <button></button> <button></button> <button></button> <button></button></div> <h5 class="svelte-3clety">After:</h5> <div class="main__table"><button class="three">3</button> <button class="four">4</button> <button></button> <button></button> <button></button> <button class="three">3</button> <button></button> <button class="four">6</button> <button class="three">7</button> <button class="one">1</button> <button></button> <button></button> <button class="three">3</button> <button class="four">4</button> <button class="highlighted three svelte-3clety">3</button> <button class="highlighted four svelte-3clety">4</button> <button class="highlighted three svelte-3clety">3</button> <button class="highlighted four svelte-3clety">6</button> <button class="highlighted three svelte-3clety">7</button> <button class="highlighted one svelte-3clety">1</button> <button class="highlighted three svelte-3clety">3</button> <button class="highlighted four svelte-3clety">4</button> <button></button> <button></button> <button></button> <button></button> <button></button></div> </div> </main> 
 			
 			<script>
 				{
-					__sveltekit_1w0zf3t = {
-						env: {},
-						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
-						element: document.currentScript.parentElement
+					__sveltekit_1gipswi = {
+						base: new URL(".", location).pathname.slice(0, -1)
 					};
+
+					const element = document.currentScript.parentElement;
 
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.41667d81.mjs"),
-						import("./_app/immutable/entry/app.14e76ecd.mjs")
+						import("./_app/immutable/entry/start.Boq86rzN.js"),
+						import("./_app/immutable/entry/app.4XD0NIZ4.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1w0zf3t.element, {
+						kit.start(app, element, {
 							node_ids: [0, 3],
 							data,
 							form: null,
@@ -202,7 +43,6 @@
 					});
 				}
 			</script>
-		
-  </div>
+		</div>
   </body>
 </html>
